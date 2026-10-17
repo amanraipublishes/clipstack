@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClipStack</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="searchbar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            d="M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm10 3-4.35-4.35"
+          />
+        </svg>
+        <input
+          id="search"
+          type="text"
+          placeholder="Search clipboard history…"
+          autocomplete="off"
+          spellcheck="false"
+          autofocus
+        />
+        <span id="count" class="count"></span>
+      </header>
+
+      <main class="list-wrap">
+        <ul id="list" class="list"></ul>
+        <div id="empty" class="empty" hidden>
+          <p>No matches</p>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <span><kbd>&crarr;</kbd> paste</span>
+        <span><kbd>&#8679;&crarr;</kbd> plain</span>
+        <span><kbd>ctrl</kbd><kbd>S</kbd> save</span>
+        <span><kbd>ctrl</kbd><kbd>alt</kbd><kbd>1-9</kbd> paste</span>
+        <span class="spacer"></span>
+        <span><kbd>esc</kbd> close</span>
+      </footer>
+
+      <div id="status" class="status" hidden></div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
